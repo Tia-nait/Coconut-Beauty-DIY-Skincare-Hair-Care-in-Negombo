@@ -556,3 +556,41 @@ footer a:focus{ color:#fff; opacity:.95; }
   .social-links a{ border-color:#fff; }
 }
 
+/* --- Touch target accessibility for social icons --- */
+.social-links {
+  display: flex;
+  gap: 12px;               /* spacing between icons */
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.social-links a {
+  width: 48px;             /* ensure minimum target size */
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;           /* enlarges clickable area */
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: background-color 0.2s ease;
+  margin: 6px;             /* ensures spacing between each target */
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  background: rgba(255,255,255,0.25);
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.social-links i {
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+}
+
