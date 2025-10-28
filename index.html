@@ -21,17 +21,19 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <script type="text/javascript" src="https://embeds.iubenda.com/widgets/2534a25e-d760-413c-a51a-f5a2bd123dd1.js" async></script>
-  <script>
-    (function (w, d) {
-      var loader = function () {
-        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-        s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag);
-      };
-      if (w.addEventListener) w.addEventListener("load", loader, false);
-      else if (w.attachEvent) w.attachEvent("onload", loader);
-      else w.onload = loader;
-    })(window, document);
-  </script>
+ <!-- Lightweight Iubenda load (delayed to post-load) -->
+<script>
+  window.addEventListener('load', function() {
+    // wait 2 seconds before loading the heavy script
+    setTimeout(function() {
+      var iub = document.createElement('script');
+      iub.src = "https://cdn.iubenda.com/iubenda.js";
+      iub.async = true;
+      document.body.appendChild(iub);
+    }, 2000);
+  });
+</script>
+
 
  <!-- Defer Google Analytics (GA4) until consent or user scroll -->
 <script>
@@ -269,3 +271,4 @@
   </div>
 </body>
 </html>
+
