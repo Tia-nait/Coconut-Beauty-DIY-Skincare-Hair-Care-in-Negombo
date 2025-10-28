@@ -33,13 +33,29 @@
     })(window, document);
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFZDSC4K57"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XFZDSC4K57');
-  </script>
+ <!-- Defer Google Analytics (GA4) until consent or user scroll -->
+<script>
+  function loadAnalytics() {
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XFZDSC4K57';
+    s.async = true;
+    document.head.appendChild(s);
+    s.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XFZDSC4K57');
+    };
+  }
+
+  // load only after iubenda consent or first scroll
+  window.addEventListener('iubenda_consent_given', loadAnalytics);
+  document.addEventListener('scroll', function once() {
+    document.removeEventListener('scroll', once);
+    loadAnalytics();
+  });
+</script>
+
 </head>
 <body>
   <!-- Skip to main content landmark -->
@@ -253,4 +269,3 @@
   </div>
 </body>
 </html>
-
