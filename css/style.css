@@ -15,10 +15,10 @@
   --nav-base-bg: #ffffff;
   --nav-base-fg: #2b2b2b;
   --nav-base-bd: var(--border);
-  --nav-hover-bg: #9E76B4;   /* your color */
-  --nav-hover-bd: #9E76B4;
-  --nav-active-bg: #8A5AA4;  /* slightly deeper */
-  --nav-active-bd: #8A5AA4;
+  --nav-hover-bg:  #6C3F8C;   /* your color */
+  --nav-hover-bd:  #6C3F8C;
+  --nav-active-bg:  #552C6E;  /* slightly deeper */
+  --nav-active-bd:  #552C6E;
 
   /* CTA shares nav hover/active colors (used by all buttons + nav CTA) */
   --cta-bg: var(--nav-hover-bg);
