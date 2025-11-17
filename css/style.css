@@ -594,3 +594,54 @@ footer a:focus{ color:#fff; opacity:.95; }
   color: #fff;
 }
 
+/* Banner Ads */
+.banner-leaderboard {
+  display: flex;
+  justify-content: center;   /* centers banner horizontally */
+  align-items: center;       /* vertically centers if the container gets taller */
+  margin: 24px auto;         /* space above/below + center in layout */
+  text-align: center;
+}
+
+.banner-leaderboard img {
+  max-width: 100%;           /* makes it responsive on small screens */
+  height: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+/* Main footer columns */
+.footer-left,
+.footer-right {
+  flex: 1 1 260px;
+}
+
+/* Banner column on the far right */
+.footer-banner-col {
+  flex: 0 0 250px;           /* fixed-ish width for the 250x250 */
+  margin-left: auto;         /* pushes it to the far right */
+  display: flex;
+  justify-content: flex-end; /* align image to the right edge */
+}
+
+.footer-banner-col img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Stack nicely on smaller screens */
+@media (max-width: 900px) {
+  .footer-banner-col {
+    margin-left: 0;
+    justify-content: flex-start;
+    order: 3;                /* show under the other columns */
+    margin-top: 16px;
+  }
+}
+
