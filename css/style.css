@@ -645,3 +645,51 @@ footer a:focus{ color:#fff; opacity:.95; }
   }
 }
 
+/*New*/
+.map-embed {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.map-embed iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Article review: no card, just clean centered text */
+#coconut-oil-for-skin-article .section02-container{
+  display: block;              /* no 3-column grid */
+}
+
+#coconut-oil-for-skin-article .item{
+  background: transparent;     /* remove white card */
+  border: 0;                   /* remove frame */
+  box-shadow: none;            /* remove shadow */
+  border-radius: 0;
+  padding: 0;                  /* use section padding only */
+  max-width: 72ch;             /* nice readable width */
+  margin: 0 auto;              /* center block */
+}
+
+#coconut-oil-for-skin-article .item p{
+  color: #050000;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: none;    
+  width: 100%;         
+}
+
+#coconut-oil-for-skin-article .item{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  max-width: 1100px;  
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
